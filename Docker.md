@@ -33,14 +33,19 @@ We can use "docker commit" or Dockerfile to create new images based on base imag
 * **USER** 
 > The USER instruction sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any RUN, CMD and ENTRYPOINT instructions that follow it in the Dockerfile. By default container was run by root.
 
-* **VOLUME** Mount file system on host server to container. Used for data persistence, data sharing and so on.
+* **VOLUME** 
+> The VOLUME instruction creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers.
+
 * **ONBUILD** The actions we want to do while build images with this Dockerfile, this cmd can be inherited by its' son images but not grandchildren and their desendants. 
 > The ONBUILD instruction adds to the image a trigger instruction to be executed at a later time, when the image is used as the base for another build. The trigger will be executed in the context of the downstream build, as if it had been inserted immediately after the FROM instruction in the downstream Dockerfile.
 
 
 ### Docker cmds
 * `docker build [-t]`
-* `docker run [-i] [-t] [-p host:container] [-P]`
+* `docker run [-i] [-t] [-p host:container] [-P] -v [source/dst] [-h hostname] [--volumes-from volume_name] [--link target_container:alias]`
+   > --volumes-from: Mount all volumes of the specified container to this new container.
+   > --link: Create connection between source and target containers. This option will add new route in /etc/hosts of decendents.
+
 * `docker start`
 * `docker stop`
 * `docker push`
@@ -48,7 +53,8 @@ We can use "docker commit" or Dockerfile to create new images based on base imag
 * `docker images`
 * `docker ps [-a] [-l]`
 * `docker port [name] [exposed port]`
-* `docker inspact [name/id]`
+* `docker inspect [name/id]`
+ >  `docker inspect --format "{{ .NetworkSettings }}" [name/id]`
 
 ### Docker network
 **1. Docker link**
