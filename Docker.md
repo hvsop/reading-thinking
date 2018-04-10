@@ -8,7 +8,7 @@ bootfs --> rootfs --> ...
 [Dockerfile example](https://docs.docker.com/engine/reference/builder/#dockerfile-examples)
 
 We can use "docker commit" or Dockerfile to create new images based on base images. However "docker commit" was deprecated, and Dockerfile is the officially recommended way.
-#### Dockerfile cmds(all in capitalized case)
+#### _Dockerfile cmds(all in capitalized case)_
 **FROM** The first cmd in Dockerfile, use this cmd to set which image this image was built. 
 > The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions.
 
@@ -25,8 +25,8 @@ We can use "docker commit" or Dockerfile to create new images based on base imag
 > An ENTRYPOINT allows you to configure a container that will run as an executable.
 
 **CMD** The command we want to run after the container was started, there can only one CMD command in Dockerfile, and usually at the end of the file.
-**WORKDIR** Set workspace directly we want to use in Dockerfile(Somehow like "cd"). 
 
+**WORKDIR** Set workspace directly we want to use in Dockerfile(Somehow like "cd"). 
 > The WORKDIR instruction sets the working directory for any `RUN, CMD, ENTRYPOINT, COPY` and `ADD` instructions that follow it in the Dockerfile. If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction.
 **ENV** Set environment variables in build stage. Use ${variable_name} syntax to get the environment variable.
 **USER** 
