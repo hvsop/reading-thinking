@@ -10,7 +10,7 @@ bootfs --> rootfs --> ...
 
 We can use "docker commit" or Dockerfile to create new images based on base images. However "docker commit" was deprecated, and Dockerfile is the officially recommended way.
 #### _Dockerfile cmds(all in capitalized case)_
-*  **FROM** The first cmd in Dockerfile, use this cmd to set which image this image was built. 
+* **FROM** The first cmd in Dockerfile, use this cmd to set which image this image was built. 
   > The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions.
 
 * **MAINTAINOR**[deprecated], use LABEL in need. Information of maintaintor, e.g name and email.
