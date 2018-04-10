@@ -53,6 +53,7 @@ We can use "docker commit" or Dockerfile to create new images based on base imag
 ### Docker network
 **1. Docker link**
 Multiple containers can communicat with each other via virtual network card **docker0**, which was created by docker server on host machine.
+
 **2. Expose port in docker**
 As long as the port exposed to public network, all clients can access this port, so it's not a secure way.
 
