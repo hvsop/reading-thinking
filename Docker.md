@@ -1,19 +1,22 @@
-###Docker layer
+### Docker layer
 One command each layer
 
 bootfs --> rootfs --> ...
 
-###Dockerfile
+### Dockerfile
 [Official document](https://docs.docker.com/engine/reference/builder/)
 [Dockerfile example](https://docs.docker.com/engine/reference/builder/#dockerfile-examples)
 
 We can use "docker commit" or Dockerfile to create new images based on base images. However "docker commit" was deprecated, and Dockerfile is the officially recommended way.
-####Dockerfile cmds(all in capitalized case)
-**FROM** The first cmd in Dockerfile, use this cmd to set which image this image was built. > The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions.
+#### Dockerfile cmds(all in capitalized case)
+**FROM** The first cmd in Dockerfile, use this cmd to set which image this image was built. 
+> The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions.
 **MAINTAINOR**[deprecated], use LABEL in need. Information of maintaintor, e.g name and email.
 **RUN** Cmd we want to run while building images. It will execute any commands in a new layer on top of the current image and commit the results.
-**EXPOSE** Expose ports after the container was started with the image we built. > The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
-**ADD <src> <dst>** The same with COPY, the only difference is this command will disable build cache and always fetch latest resources. > The ADD instruction copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the image at the path <dest>.
+**EXPOSE** Expose ports after the container was started with the image we built. 
+> The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime. 
+**ADD <src> <dst>** The same with COPY, the only difference is this command will disable build cache and always fetch latest resources. 
+  > The ADD instruction copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the image at the path <dest>.
 **COPY** Copy files(dirs) from workspace to docker images. 
 **ENTRYPOINT**(exec/shell) The same with CMD, the sigificant difference is this command won't be overwritten by params that user specified while starting the container. > An ENTRYPOINT allows you to configure a container that will run as an executable.
 **CMD** The command we want to run after the container was started, there can only one CMD command in Dockerfile, and usually at the end of the file.
