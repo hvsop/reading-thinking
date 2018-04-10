@@ -5,6 +5,7 @@ bootfs --> rootfs --> ...
 
 ### Dockerfile
 [Official document](https://docs.docker.com/engine/reference/builder/)
+
 [Dockerfile example](https://docs.docker.com/engine/reference/builder/#dockerfile-examples)
 
 We can use "docker commit" or Dockerfile to create new images based on base images. However "docker commit" was deprecated, and Dockerfile is the officially recommended way.
