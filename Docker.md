@@ -31,26 +31,27 @@ We can use "docker commit" or Dockerfile to create new images based on base imag
 **ENV** Set environment variables in build stage. Use ${variable_name} syntax to get the environment variable.
 **USER** 
 > The USER instruction sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any RUN, CMD and ENTRYPOINT instructions that follow it in the Dockerfile. By default container was run by root.
+
 **VOLUME** Mount file system on host server to container. Used for data persistence, data sharing and so on.
 **ONBUILD** The actions we want to do while build images with this Dockerfile, this cmd can be inherited by its' son images but not grandchildren and their desendants. 
 > The ONBUILD instruction adds to the image a trigger instruction to be executed at a later time, when the image is used as the base for another build. The trigger will be executed in the context of the downstream build, as if it had been inserted immediately after the FROM instruction in the downstream Dockerfile.
 
 
-###Docker cmds
-`docker build`
-`docker run`
-`docker start`
-`docker stop`
-`docker push`
-`docker pull`
-`docker images`
-`docker ps [-a]`
-`docker port [name] [exposed port]`
-`docker inspact [name/id]`
+### Docker cmds
+* `docker build`
+* `docker run`
+* `docker start`
+* `docker stop`
+* `docker push`
+* `docker pull`
+* `docker images`
+* `docker ps [-a]`
+* `docker port [name] [exposed port]`
+* `docker inspact [name/id]`
 
-###Docker network
-####1. Docker link 
+### Docker network
+**1. Docker link**
 Multiple containers can communicat with each other via virtual network card **docker0**, which was created by docker server on host machine.
-####1. Expose port in docker
+**2. Expose port in docker**
 As long as the port exposed to public network, all clients can access this port, so it's not a secure way.
 
