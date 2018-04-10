@@ -11,6 +11,7 @@ We can use "docker commit" or Dockerfile to create new images based on base imag
 #### Dockerfile cmds(all in capitalized case)
 **FROM** The first cmd in Dockerfile, use this cmd to set which image this image was built. 
 > The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions.
+
 **MAINTAINOR**[deprecated], use LABEL in need. Information of maintaintor, e.g name and email.
 **RUN** Cmd we want to run while building images. It will execute any commands in a new layer on top of the current image and commit the results.
 **EXPOSE** Expose ports after the container was started with the image we built. 
