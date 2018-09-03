@@ -152,3 +152,6 @@
 ![对Spring MVC的扩展](https://github.com/buddyli/reading-thinking/blob/dev/Java/pic/Core模块对Spring%20MVC框架模型的扩展.png)
 
 ![Core模块流程图](https://github.com/buddyli/reading-thinking/blob/dev/Java/pic/Core工作流程.png)
+
+### [ThreadLocal](http://www.jasongj.com/java/threadlocal/)
+采用静态内部类ThreadLocalMap来维护所有线程相关的内容，采用Entry保存单个线程相关的数据。
