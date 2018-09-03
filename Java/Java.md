@@ -8,7 +8,14 @@
     * Permits null keys/values
     * put/get is unsynchronized
     * 4 constructors
-    * 基于Map接口实现、允许null键/值、非同步、不保证有序(比如插入的顺序)、也不保证序不随时间变化
+    * 基于哈希表的Map接口实现、允许null键/值、非同步、不保证有序(比如插入的顺序)、也不保证序不随时间变化
+    * [HashMap实现原理中文参考](http://wiki.jikexueyuan.com/project/java-collection/hashmap.html)
+  * **ConcurrentHashMap**
+    * [实现原理](https://blog.csdn.net/justloveyou_/article/details/72783008)
+    > **读操作不需要加锁？** 因为HashEntry中的key、hash和next指针都是final的。这意味着，我们不能把节点添加到链表的中间和尾部，也不能在链表的中间和尾部删除节点。这个特性可以保证：在访问某个节点时，这个节点之后的链接不会被改变，这个特性可以大大降低处理链表时的复杂性。与此同时，由于HashEntry类的value字段被声明是Volatile的，因此Java的内存模型就可以保证：某个写线程对value字段的写入马上就可以被后续的某个读线程看到。此外，由于在ConcurrentHashMap中不允许用null作为键和值，所以当读线程读到某个HashEntry的value为null时，便知道产生了冲突 —— 发生了重排序现象，此时便会加锁重新读入这个value值。这些特性互相配合，使得读线程即使在不加锁状态下，也能正确访问 ConcurrentHashMap。总的来说，ConcurrentHashMap读操作不需要加锁的奥秘在于以下三点：
+      * 用HashEntry对象的不变性来降低读操作对加锁的需求；
+      * 用Volatile变量协调读写线程间的内存可见性；
+      * 若读时发生指令重排序现象，则加锁重读；
 
 ### wait(long time), notify(), notifyAll(), sleep()
   * wait() - Causes the current thread to wait until another thread invokes the notify() aor notifyAll() for this object. The current thread must own this object's monitor. __*The thread releases ownership of this monitor and waits until another thread notifies threads waiting on this object's monitor to wake up*__ either through a call to the {@code notify} method or the {@code notifyAll} method. The thread then waits until it can re-obtain ownership of the monitor and resumes execution.
@@ -123,3 +130,13 @@
 
 * 类加载双亲委派模型：
 自定义类加载器（User ClassLoader） - 应用程序类加载器（Application ClassLoader, 系统类加载器）- 扩展类加载器（Extension ClassLoader） - 启动类加载器（Bootstrap ClassLoader）。每个类加载器收到类加载的请求后，不会立刻自己去加载，而是把请求委派给父类加载器去完成，每个层次的类加载器都是如此。只有父加载器无法完成这个加载请求时，子加载器才会尝试自己去加载。
+
+### [Excutor - Java线程池实现原理](https://www.jianshu.com/p/87bff5cc8d8c)
+> * Executors.new...Pool()
+* Executor.execute() 通过Executor.execute()方法提交的任务，必须实现Runnable接口，该方式提交的任务不能获取返回值，因此无法判断任务是否执行成功
+* ExecutorService.submit() 通过ExecutorService.submit()方法提交的任务，可以获取任务执行完的返回值。
+
+### [NIO](http://wiki.jikexueyuan.com/project/java-nio-zh/)
+>   * Selector(read, write, connect, accept)
+  * Buffer(IntBuffer, CharBuffer...)
+  * Channel(FileChannel, SocketChannel, ServerSocketChannel)

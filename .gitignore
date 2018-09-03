@@ -76,4 +76,6 @@ fabric.properties
 
 .idea/vcs.xml
 
+*.DS_Store
+
 # End of https://www.gitignore.io/api/intellij
