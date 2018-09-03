@@ -143,12 +143,12 @@
 
 ### Spring MVC
 ![Spring MVC request handle model](https://github.com/buddyli/reading-thinking/blob/master/Java/pic/springMVC%20request%20handle%20model.png)
-> *	Spring MVC的核心是DispatchServlet。客户端发送的HTTP请求达到应用服务器后，DispatchServlet根据请求的信息以及HandlerMapping的配置找到处理请求的处理器（Handler）。
-*	DispatchServlet得到对应的处理当前请求的Handler之后，通过HandlerAdapter对Handler进行封装，再以统一的适配器接口调用真正的Handler。HandlerAdapter是一个适配器，用来用统一的接口对各种Handler方法进行调用。
-*	Handler完成业务逻辑的处理后将返回一个ModelAndView给DispatchServlet。ModelAndView中包含了模型数据信息和需要返回给客户端的逻辑视图名。
-*	DispatchServlet调用ViewResolver完成由逻辑视图到真实视图对象的解析工作。并使用这个真实的View对象对ModelAndView中的模型数据进行解析和渲染。
-*	DispatchServlet将上一步获取到的数据返回给客户端。最终结果可能是HTML页面，或者是一段JSON文本，或者是一个图片等等。
+>   *	Spring MVC的核心是DispatchServlet。客户端发送的HTTP请求达到应用服务器后，DispatchServlet根据请求的信息以及HandlerMapping的配置找到处理请求的处理器（Handler）。
+  *	DispatchServlet得到对应的处理当前请求的Handler之后，通过HandlerAdapter对Handler进行封装，再以统一的适配器接口调用真正的Handler。HandlerAdapter是一个适配器，用来用统一的接口对各种Handler方法进行调用。
+  *	Handler完成业务逻辑的处理后将返回一个ModelAndView给DispatchServlet。ModelAndView中包含了模型数据信息和需要返回给客户端的逻辑视图名。
+  *	DispatchServlet调用ViewResolver完成由逻辑视图到真实视图对象的解析工作。并使用这个真实的View对象对ModelAndView中的模型数据进行解析和渲染。
+  *	DispatchServlet将上一步获取到的数据返回给客户端。最终结果可能是HTML页面，或者是一段JSON文本，或者是一个图片等等。
 
-![对Spring MVC的扩展]()
+![对Spring MVC的扩展](https://github.com/buddyli/reading-thinking/blob/dev/Java/pic/Core模块对Spring%20MVC框架模型的扩展.png)
 
-![Core模块流程图]()
+![Core模块流程图](https://github.com/buddyli/reading-thinking/blob/dev/Java/pic/Core工作流程.png)
