@@ -140,3 +140,6 @@
 >   * Selector(read, write, connect, accept)
   * Buffer(IntBuffer, CharBuffer...)
   * Channel(FileChannel, SocketChannel, ServerSocketChannel)
+
+### Spring MVC
+![Spring MVC request handle model](https://github.com/buddyli/reading-thinking/blob/master/Java/pic/springMVC%20request%20handle%20model.png)
