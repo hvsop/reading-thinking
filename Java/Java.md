@@ -8,7 +8,7 @@
     * Permits null keys/values
     * put/get is unsynchronized
     * 4 constructors
-    * 基于哈希表的Map接口实现、允许null键/值、非同步、不保证有序(比如插入的顺序)、也不保排序不随时间变化
+    * 基于哈希表的Map接口实现、允许null键/值、非同步、不保证有序(比如插入的顺序)、也不保证排序不随时间变化
     * [HashMap实现原理中文参考](http://wiki.jikexueyuan.com/project/java-collection/hashmap.html)
   * **ConcurrentHashMap**
     * [实现原理](https://blog.csdn.net/justloveyou_/article/details/72783008)
