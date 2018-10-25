@@ -1,8 +1,8 @@
 ### HashTable && HashMap
   *  **HashTable**
-    * extends Dictionary implements HashMap
-    * No null keys/values
-    * put/get is synchronized
+  * extends Dictionary implements HashMap
+  * No null keys/values
+  * put/get is synchronized
   * **HashMap**
     * extends AbstractMap implements HashMap
     * Permits null keys/values
@@ -10,6 +10,12 @@
     * 4 constructors
     * 基于哈希表的Map接口实现、允许null键/值、非同步、不保证有序(比如插入的顺序)、也不保证排序不随时间变化
     * [HashMap实现原理中文参考](http://wiki.jikexueyuan.com/project/java-collection/hashmap.html)
+    > * 数组+链表的实现结构；
+    > * 数组的size固定为2的N次幂，可以保证计算Entry在table中保存的位置时进行&运算的效率，并且发生hask碰撞的概率较低；
+    > * 可以保存null的key和value，固定的放在table(0)的位置;
+    > * 如果两个Entry的hash相同，如果key也相同的话会直接更新既有Entry的value；否则的话在链表的头部插入新的Entry；
+    > * 当元素的个数大于数组大小*loadFactor时，就会进行resize。resize时会涉及到Entry的重新分配，因此开销很大，如果能在一开始就知道需要保存的元素个数，然后再初始化会比较好；
+    > * fail-fast机制 - 当使用迭代器迭代的过程中，如果多个线程都是修改map，就会抛出ConcurrentModificationException，这是Java Collection的一种错误机制。如果一定要remove元素，可以使用迭代器的remove方法。
   * **ConcurrentHashMap**
     * [实现原理](https://blog.csdn.net/justloveyou_/article/details/72783008)
     > **读操作不需要加锁？** 因为HashEntry中的key、hash和next指针都是final的。这意味着，我们不能把节点添加到链表的中间和尾部，也不能在链表的中间和尾部删除节点。这个特性可以保证：在访问某个节点时，这个节点之后的链接不会被改变，这个特性可以大大降低处理链表时的复杂性。与此同时，由于HashEntry类的value字段被声明是Volatile的，因此Java的内存模型就可以保证：某个写线程对value字段的写入马上就可以被后续的某个读线程看到。此外，由于在ConcurrentHashMap中不允许用null作为键和值，所以当读线程读到某个HashEntry的value为null时，便知道产生了冲突 —— 发生了重排序现象，此时便会加锁重新读入这个value值。这些特性互相配合，使得读线程即使在不加锁状态下，也能正确访问 ConcurrentHashMap。总的来说，ConcurrentHashMap读操作不需要加锁的奥秘在于以下三点：
