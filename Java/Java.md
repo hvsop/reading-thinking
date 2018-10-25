@@ -140,3 +140,5 @@
 >   * Selector(read, write, connect, accept)
   * Buffer(IntBuffer, CharBuffer...)
   * Channel(FileChannel, SocketChannel, ServerSocketChannel)
+  
+### [一致性Hash](https://troywu0.gitbooks.io/spark/content/%E4%B8%80%E8%87%B4%E6%80%A7hash.html)
