@@ -77,7 +77,7 @@
 * 该类的ClassLoader已经被回收
 * 该类对应的java.lang.Class对象没有在任何地方被引用，无法在任何地方通过反射访问该类的方法。
   
-### Java GCRoots定义
+#### Java GC Roots定义
 * 堆中的临时变量
 * 静态变量引用的对象
 * 常量引用的对象
