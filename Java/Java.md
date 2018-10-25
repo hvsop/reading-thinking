@@ -1,8 +1,8 @@
 ### HashTable && HashMap
   *  **HashTable**
-   * extends Dictionary implements HashMap
-   * No null keys/values
-   * put/get is synchronized
+    * extends Dictionary implements HashMap
+    * No null keys/values
+    * put/get is synchronized
   * **HashMap**
     * extends AbstractMap implements HashMap
     * Permits null keys/values
