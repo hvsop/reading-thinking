@@ -155,6 +155,10 @@
 * Channel(FileChannel, SocketChannel, ServerSocketChannel)
   
 ### [一致性Hash](https://troywu0.gitbooks.io/spark/content/%E4%B8%80%E8%87%B4%E6%80%A7hash.html)
+* 哈希环，0-2^32-1的范围，求hash后将object放到环上，顺时针查找到的第一个server保存该object。
+* 为了解决分布不均匀的问题，可以添加若干虚拟的节点，object保存在该虚拟节点对应的真正server上即可。
+* 当集群中cache server节点增加活着减少时，需要移动的element只在新增加活着减少的server到下一个server之前，其他的元素不会被影响。
+
 ### Executors四种ThreadPool
 * CachedThreadPool
 * FixedThreadPool
