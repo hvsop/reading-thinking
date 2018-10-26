@@ -36,14 +36,14 @@
 
 ### JVM内存
   * **线程共享数据区**
-    * ***方法区***
+    * **方法区**
       > 存储已被虚拟机加载的类信息（版本、字段、方法、接口等描述信息）、常量、静态变量和即时编译器编译后的代码等数据；
 
       > 无法满足内存分配需求时也会抛出OutOfMemoryError。
 
       > 运行时常量池（Runtime Constant Pool）是方法区的一部分，存储编译期生成的各种字面量和符号引用。
 
-    * ***堆***
+    * **堆**
       > 被所有的线程共享，在虚拟机启动时创建。几乎所有的对象实例与数组都是在堆上创建。
 
       > 从内存回收的角度看，可以分为老年代和新生代；或者更为细致的划分为Eden空间，From Survivor空间和ToSurvivor空间。
@@ -53,15 +53,15 @@
       > 如果堆中没有内存可以分配，并且也无法扩展时，会抛出OutOfMemoryError。
 
   * **线程隔离的数据区**
-    * ***本地方法(Native Method)栈***
+    * **本地方法(Native Method)栈**
       > 为虚拟机用到的本地方法服务。虚拟机规范中对如何实现本地方法栈没有强制规定，因此HotSpot JVM等直接把本栈与虚拟机栈合二为一，因此该区域抛出的异常与Java虚拟机栈相同。
 
-    * ***Java虚拟机栈***
+    * **Java虚拟机栈**
       > 描述Java方法执行的内存模型：每个方法被执行的时候都会同时创建一个栈桢用于存储局部变量表、操作栈、动态链接、方法出口等信息。方法从调用到退出，对应着一个栈桢在Java虚拟机栈中入栈到出栈的过程。
 
       > 如果线程请求的栈深度超过了JVM所允许的深度，将抛出StackOverflowError异常；如果虚拟机栈可以动态扩展，但是扩展时申请不到足够的内存就会抛出OutOfMemoryError异常。
 
-    * ***程序计数器***
+    * **程序计数器**
       > 本区域可以看作是当前线程执行的字节码的行号指示器。Java虚拟机的多线程是通过线程轮流切换并分配出机器的执行时间来实现的，在任何确定的时刻，一个处理器（多核处理器的一个内核）只会执行一条线程中的指令。因此，为了切换后能回到正确的位置，每条线程都必须有一个线程私有的程序计数器，各条线程之间的计数器互不影响，独立存储。__*Java虚拟机规范中唯一一个没有规定OutOfMemoryError的情况的区域*__
 
   * **直接内存（Direct Memory）**
@@ -145,13 +145,13 @@
 自定义类加载器（User ClassLoader） - 应用程序类加载器（Application ClassLoader, 系统类加载器）- 扩展类加载器（Extension ClassLoader） - 启动类加载器（Bootstrap ClassLoader）。每个类加载器收到类加载的请求后，不会立刻自己去加载，而是把请求委派给父类加载器去完成，每个层次的类加载器都是如此。只有父加载器无法完成这个加载请求时，子加载器才会尝试自己去加载。
 
 ### [Excutor - Java线程池实现原理](https://www.jianshu.com/p/87bff5cc8d8c)
-> * Executors.new...Pool()
+* Executors.new...Pool()
 * Executor.execute() 通过Executor.execute()方法提交的任务，必须实现Runnable接口，该方式提交的任务不能获取返回值，因此无法判断任务是否执行成功
 * ExecutorService.submit() 通过ExecutorService.submit()方法提交的任务，可以获取任务执行完的返回值。
 
 ### [NIO](http://wiki.jikexueyuan.com/project/java-nio-zh/)
->   * Selector(read, write, connect, accept)
-  * Buffer(IntBuffer, CharBuffer...)
-  * Channel(FileChannel, SocketChannel, ServerSocketChannel)
+* Selector(read, write, connect, accept)
+ * Buffer(IntBuffer, CharBuffer...)
+ * Channel(FileChannel, SocketChannel, ServerSocketChannel)
   
 ### [一致性Hash](https://troywu0.gitbooks.io/spark/content/%E4%B8%80%E8%87%B4%E6%80%A7hash.html)
