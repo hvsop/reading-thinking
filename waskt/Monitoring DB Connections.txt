@@ -1,0 +1,22 @@
+ How to monitor the contents of your JDBC connections from the connection pool to the back end database  
+ Diagnostic trace which watches for any connections held in-use for more than 10 seconds:
+ConnLeakLogic=all
+The diagnostic trace WAS.j2c implicitly includes the above trace string.
+Search trace for "Connection Leak Logic Information"
+
+
+Using wsadmin: showPoolContents
+Only available when WAS.j2c trace is enabled. Apply PK83902 (http://www-01.ibm.com/support/docview.wss?uid=swg1PK83902) to make showPoolContents available with just ConnLeakLogic=all.
+
+
+ AdminControl.invoke(AdminControl.queryNames("*:name=$DATASOURCE_DISPLAY_NAME,process=$SERVER_NAME,*"), "showPoolContents")
+Note: use the display name of the data source, not the JNDI name.
+
+
+Standalone Java program calling the JMX bean: http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.nd.doc/info/ae/ae/rdat_adexjava.html
+
+
+
+
+Troubleshooting connection pooling (J2C) problems in WebSphere Application Server
+http://www-01.ibm.com/support/docview.wss?uid=swg21247168

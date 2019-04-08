@@ -1,0 +1,470 @@
+<html><head><title>Liberty Cluster setup for new Microservice - instruction</title><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" ><STYLE type="text/css">TABLE { border-collapse: collapse; border-top: 1px; border-left: 1px; border-style: solid; margin: 4px; }TD, TH { border-bottom: 1px; border-right: 1px; border-style: solid; padding: 4px; }TH { background-color: #D8D8D8; }</STYLE></head><body><div sandbox="allow-forms allow-same-origin allow-scripts allow-popups"><table border="0" cellpadding="0" cellspacing="0" dir="ltr" height="123" style="border-collapse: collapse;" width="488">
+	<colgroup sandbox="allow-forms allow-same-origin allow-scripts allow-popups">
+		<col style="width:339px;"></col>
+		<col style="width:160px;"></col>
+		<col style="width:144px;"></col>
+	</colgroup>
+	<tbody sandbox="allow-forms allow-same-origin allow-scripts allow-popups">
+		<tr height="43" style="height:35px;">
+			<td height="43" style="height: 35px; width: 230px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">Node</span></span></span></p>
+			</td>
+			<td style="width: 239px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">External IP</span></span></span></p>
+			</td>
+			<td style="width: 212px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">Internal IP</span></span></span></p>
+			</td>
+		</tr>
+		<tr height="43" style="height:35px;">
+			<td height="43" style="height: 35px; width: 230px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">bldbt168211.bld.dst.ibm.com</span></span></span></p>
+			</td>
+			<td style="width: 239px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">9.16.168.211</span></span></span></p>
+			</td>
+			<td style="width: 212px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">10.5.10.211</span></span></span></p>
+			</td>
+		</tr>
+		<tr height="43" style="height:35px;">
+			<td height="43" style="height: 35px; width: 230px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">bldbt168212.bld.dst.ibm.com</span></span></span></p>
+			</td>
+			<td style="width: 239px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">9.16.168.212</span></span></span></p>
+			</td>
+			<td style="width: 212px;">
+			<p style="language:en-US;margin-top:0pt;margin-bottom:0pt;margin-left:0in;text-align:left;direction:ltr;unicode-bidi:embed;vertical-align:middle;word-break:normal;punctuation-wrap:hanging;"><span style="font-size:16px;"><span style="color: black;"><span style="font-family: dengxian;">10.5.10.212</span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="js-topic-title ibm-h2 ibm-padding-content" dir="auto" tabindex="0">&nbsp;</p>
+
+<h1 class="js-topic-title ibm-h2 ibm-padding-content" dir="auto" tabindex="0">Installing Liberty by using downloaded archives</h1>
+
+<p dir="auto">Refer to <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_inst.html">https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_inst.html</a></p>
+
+<p dir="ltr">I download IBM JDK 1.8, Libterty ND 18.0.0.1 and IHS 9.0.0.7 from IBM fix central. all installation archives can be found in bldbt168211.bld.dst.ibm.com: /home/mengqn/liberty</p>
+
+<p dir="ltr">1.IBM JDK 1.8 : /home/mengqn/liberty/ibm-java-x86_64-sdk-8.0-5.15.bin</p>
+
+<p dir="ltr">2.Libterty ND 18.0.0.1 : /home/mengqn/liberty/wlp-nd-all-18.0.0.1.jar ,&nbsp; /home/mengqn/liberty/wlp-nd-license.jar</p>
+
+<p dir="ltr">3.IHS 9.0.0.7 : /home/mengqn/liberty/9.0.0-WS-IHS-ARCHIVE-linux-x86_64-FP007.zip</p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">1.Install IBM JDK 1.8 and set JAVA_HOME</strong></span></p>
+
+<p dir="ltr">IBM JDK 1.8 is install in /opt/ibm/java-x86_64-80 by running the download bin file ./ibm-java-x86_64-sdk-8.0-5.15.bin,&nbsp; to set JAVA_HOME:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edit /etc/profile and add following :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JAVA_HOME=/opt/ibm/java-x86_64-80<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; PATH=$JAVA_HOME/bin:$PATH</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; export JAVA_HOME</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; export PATH</p>
+
+<p dir="ltr">&nbsp; run 'source /etc/profile' to take effect the change.</p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">2.Install WebSphere Application Server Liberty Network Deployment 18.0.0.1</strong></span></p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation dir:&nbsp;&nbsp; /opt/ibm/WebSphere<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; install by java -jar command:&nbsp; &nbsp;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; java -jar&nbsp; wlp-nd-all-18.0.0.1.jar&nbsp;&nbsp; //install Liberty<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; java -jar&nbsp; wlp-nd-license.jar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //apply Liberty license</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All application server files are stored in subdirectories of the<code sandbox="allow-forms allow-same-origin allow-scripts allow-popups"> wlp </code> directory.</p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">3.Install IHS 9.0.0.7 for Liberty</strong></span></p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation dir : /opt/ibm/IHS</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cd /opt/ibm/IHS</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unzip 9.0.0-WS-IHS-ARCHIVE-linux-x86_64-FP007.zip</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ./postinstall.sh</p>
+
+<p dir="ltr">&nbsp;</p>
+
+<h1 dir="ltr">Setting up the server-management environment for Liberty</h1>
+
+<p dir="ltr">Refer to <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html">https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html</a></p>
+
+<p dir="ltr"><a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/tagt_wlp_server_management.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/tagt_wlp_server_management.html</a></p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_collective_arch.html">https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_collective_arch.html</a></p>
+
+<p dir="ltr"><img alt="" height="802" id="1532018454692_0" src="https://w3-connections.ibm.com/wikis/form/api/wiki/11967455-f094-494e-8d95-730c5ef7e47a/page/25c9f2c3-734d-497a-bffc-cbf024f7e896/attachment/0a5659a5-e020-4fed-9a48-66d603b90c6f/media/editor_image_7252964e-de46-4f19-8679-f23f19e52c0c.png" width="695"></img></p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Figure 1. <span class="ph">Liberty</span> server clusters Sample</p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">1. Create collective controller</strong></span></p>
+
+<p dir="ltr">Create a server 'controller1' act as&nbsp;<span class="cmd">collective controller</span> on bldbt168211.bld.dst.ibm.com<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server create controller1<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+<span class="cmd">Create the collective controller configuration and </span>define collective name by --collectiveName param<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective create controller1 --keystorePassword=controller1 --createConfigFile --collectiveName=collective1</p>
+
+<p dir="ltr">Edit controller1's server.xml file : vi /opt/ibm/WebSphere/wlp/usr/servers/controller1/server.xml ,&nbsp; and change the HTTP and HTTPS ports to 9085 and 9448, and add host=“*”:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; &lt;httpEndpoint id="defaultHttpEndpoint" host=“*” httpPort="9085" httpsPort=”9448” /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; Add the include file from the create operation:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; &lt;include location="${server.config.dir}/collective-create-include.xml" /&gt;</p>
+
+<p dir="ltr">Edit controller1's collective-create-include.xml : vi /opt/ibm/WebSphere/wlp/usr/servers/controller1/collective-create-include.xml , and specify administrative user ID and password values for the collective:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; &lt;quickStartSecurity userName="admin" userPassword="adminpwd" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; set collectiveController properties for replica set by add following:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; &lt;collectiveController replicaHost="10.5.10.211"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replicaPort="20010"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replicaSet="10.5.10.211:20010"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; isInitialReplicaSet="true"/&gt;</p>
+
+<p dir="ltr">Start controller1:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server start controller1</p>
+
+<p dir="ltr">Check messages.log to ensure controller1 start successfully, keyword 'CollectiveRegistration MBean is available'<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp; grep CWWKX9003I /opt/ibm/WebSphere/wlp/usr/servers/controller1/logs/messages.log<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp; [5/31/18 2:43:21:068 MDT] 0000003e llective.repository.internal.CollectiveRegistrationMBeanImpl I CWWKX9003I: CollectiveRegistration MBean is available.</p>
+
+<p dir="ltr">To better monitor and manage Liberty controllers and members, we can add admin center feather to server.xml:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; vi /opt/ibm/WebSphere/wlp/usr/servers/controller1/server.xml&nbsp; and add 'adminCenter-1.0' feature to feature manager&nbsp; :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; &lt;feature&gt;adminCenter-1.0&lt;/feature&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; access to admin center:<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+<a href="https://bldbt168211.bld.dst.ibm.com:9448/adminCenter/login.jsp">&nbsp;&nbsp;&nbsp;&nbsp; </a><a href="https://bldbt168211.bld.dst.ibm.com:9448/adminCenter/login.jsp">https://bldbt168211.bld.dst.ibm.com:9448/adminCenter/login.jsp</a> &nbsp;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp; login with admin/adminpwd</p>
+
+<p dir="ltr"><span style="color:#FF0000;">Important: each Liberty server should have one unique http/https port number such as 9080/9443...., so before assign port number in server.xml, we should run '/sbin/iptables -L -n' to check if the port can be accessed. if not, you can add new port number by edit /etc/sysconfig/iptables and add content like this '-A OS_FIREWALL_ALLOW -p tcp -m state --state NEW -m tcp --dport 9449 -j ACCEPT' before 'COMMIT'. then run 'service iptables stop' and 'service iptables start' to make the change come into effect.</span></p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">2.Create and activate a replica set for controller</strong></span></p>
+
+<p dir="ltr">refer to : <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/tagt_wlp_configure_replicas.html">https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/tagt_wlp_configure_replicas.html</a></p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://developer.ibm.com/wasdev/docs/examining-administrative-high-availability/">https://developer.ibm.com/wasdev/docs/examining-administrative-high-availability/</a></p>
+
+<p dir="ltr">Ensure the existing collective controller is running on bldbt168211.bld.dst.ibm.com :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server status controller1</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Server controller1 is running with process ID 19692.</p>
+
+<p dir="ltr">Create a server to be the new collective controller on bldbt168211.bld.dst.ibm.com :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server create controller2</p>
+
+<p dir="ltr">Replicate the existing collective controller configuration into the new collective controller:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective replicate controller2 --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --keystorePassword=controller1 --createConfigFile</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If prompted to accept the certificate chain, enter y</p>
+
+<p dir="ltr">Edit collective-replicate-include.xml , and ensure that replicaPort sets a port number for the replica that is unique among the replica set and that replicaSet sets host:port values that identify the replica set.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;collectiveController replicaHost="10.5.10.211"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replicaPort="20011"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replicaSet="10.5.10.211:20010"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isInitialReplicaSet="false" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ensure the security configuration sets the same values as those used by the original controller. For example, both controller1 and the controller2 replica use:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;quickStartSecurity userName="admin" userPassword="adminpwd" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ensure the collective root signers keystore element sets the same password as that used by the original controller. For example, copy the collectiveRootKeys keystore password from the controller1 server.xml file and paste it into the controller2 replica server.xml file.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;!-- collective root signers keystore --&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;keyStore id="collectiveRootKeys" password="{xor}PDAxKy0wMzM6LW4="<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; location="${server.config.dir}/resources/collective/rootKeys.jks" /&gt;</p>
+
+<p dir="ltr">Edit server.xml and add :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;include location="${server.config.dir}/collective-replicate-include.xml" /&gt;</p>
+
+<p dir="ltr">Start the new replica by starting the new collective controller:<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server start controller2</p>
+
+<p dir="ltr">Activate the new replica.<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Run an addReplica command that uses the administrative security domain configuration of the collective controller and specifies the endpoint of the replica that you want to activate in the form replicaHost:replicaPort.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective addReplica 10.5.10.211:20011 --controller=admin:adminpwd@bldbt168211.bld.dst.ibm.com:9448</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If prompted to accept the certificate chain, enter y (yes).</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; Do you want to accept the above certificate chain? (y/n) y<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Successfully added replica endpoint 10.5.10.212:20010 to the replica set</p>
+
+<p dir="ltr">Do the same steps for controller3 on bldbt168212.bld.dst.ibm.com :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server create controller3</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective replicate controller3 --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --keystorePassword=controller1 --createConfigFile</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vi collective-replicate-include.xml and add :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;collectiveController replicaHost="10.5.10.212"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replicaPort="20010"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replicaSet="10.5.10.211:20010 10.5.10.211:20011"<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isInitialReplicaSet="false" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;quickStartSecurity userName="admin" userPassword="adminpwd" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- collective root signers keystore --&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;keyStore id="collectiveRootKeys" password="{xor}PDAxKy0wMzM6LW4="<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; location="${server.config.dir}/resources/collective/rootKeys.jks" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edit server.xml and add :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;include location="${server.config.dir}/collective-replicate-include.xml" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Start the new replica by starting the new collective controller:<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server start controller3</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Activate the new replica.<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective addReplica 10.5.10.212:20010 --controller=admin:adminpwd@bldbt168211.bld.dst.ibm.com:9448</p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">3.Create collective member</strong></span></p>
+
+<p dir="ltr">Create member1 on bldbt168211.bld.dst.ibm.com:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server create member1</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective join member1 --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --keystorePassword=controller1 --createConfigFile</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; Edit /opt/ibm/WebSphere/wlp/usr/servers/member1/server.xml , and change the HTTP and HTTPS ports to 9083 and 9446, and add host=“*”:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;httpEndpoint id="defaultHttpEndpoint" host=“*” httpPort="9083" httpsPort=”9446” /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add the include from the join operation:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;include location="${server.config.dir}/collective-join-include.xml" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server start member1</p>
+
+<p dir="ltr">Create member2 on bldbt168212.bld.dst.ibm.com:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server create member2</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective join member2 --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --keystorePassword=controller1 --createConfigFile</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; Edit /opt/ibm/WebSphere/wlp/usr/servers/member2/server.xml , and change the HTTP and HTTPS ports to 9084 and 9447, and add host=“*”:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;httpEndpoint id="defaultHttpEndpoint" host=“*” httpPort="9084" httpsPort=”9447” /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add the include from the join operation:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;include location="${server.config.dir}/collective-join-include.xml" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/server start member2</p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">4.Configure cluster for collective members</strong></span></p>
+
+<p dir="ltr">Assign member1 and member2 to the default cluster.</p>
+
+<p dir="ltr">&nbsp; &nbsp; &nbsp;vi /opt/ibm/WebSphere/wlp/usr/servers/member1/server.xml</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; vi /opt/ibm/WebSphere/wlp/usr/servers/member2/server.xml</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; Add the clusterMember-1.0 feature to each server's server.xml:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp; &lt;featureManager&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;feature&gt;clusterMember-1.0&lt;/feature&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/featureManager&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the default cluster name is defaultCluster, if you want to change cluster name, add following section in server.xml for both member1 member2.<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;clusterMember name="myCluster"/&gt;</p>
+
+<p dir="ltr">Update the server.xml for each member to support file transfer</p>
+
+<p dir="ltr">&nbsp;&nbsp; &nbsp; &nbsp;Add the following lines to the server.xml. These lines will enable the file transfer service to write to the server's configuration directory.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;remoteFileAccess&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;writeDir&gt;${server.config.dir}&lt;/writeDir&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;readDir&gt;${server.config.dir}&lt;/readDir&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/remoteFileAccess&gt;</p>
+
+<p dir="ltr">Update host computers with a Liberty collective to enable server config on AdminCenter</p>
+
+<p dir="ltr">&nbsp;&nbsp; &nbsp; &nbsp;We use 'wassrvr' as user to run liberty servers, firstly confirm /home/wassrvr and /home/wassrvr/.ssh is 700 and authorized_keys/id_rsa/id_rsa.pub is 600. otherwise you will get authentication problem when using adminCenter to admin servers. run 'ssh-keygen -t rsa' as wassrvr and generate PrivateKey for user wassrvr.</p>
+
+<p dir="ltr">&nbsp; &nbsp; &nbsp; To enable server config on AdminCenter</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run following command on bldbt168211.bld.dst.ibm.com :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective updateHost bldbt168211.bld.dst.ibm.com --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --sshPrivateKey=/home/wassrvr/.ssh/id_rsa --hostWritePath=/opt/ibm/WebSphere/wlp/usr/servers/member1 --hostJAVAHome=/opt/ibm/java-x86_64-80</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do you want to accept the above certificate chain? (y/n) y<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Host bldbt168211.bld.dst.ibm.com authentication information successfully updated.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run following command on bldbt168212.bld.dst.ibm.com:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; /opt/ibm/WebSphere/wlp/bin/collective updateHost bldbt168212.bld.dst.ibm.com --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --sshPrivateKey=/home/wassrvr/.ssh/id_rsa --hostWritePath=/opt/ibm/WebSphere/wlp/usr/servers/member2 --hostJAVAHome=/opt/ibm/java-x86_64-80</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do you want to accept the above certificate chain? (y/n) y<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Host bldbt168212.bld.dst.ibm.com authentication information successfully updated.</p>
+
+<p dir="ltr">Test connection between controller and member servers</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective testConnection bldbt168211.bld.dst.ibm.com,/opt/ibm/WebSphere/wlp/usr,member1 --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --autoAcceptCertificates</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/collective testConnection bldbt168212.bld.dst.ibm.com,/opt/ibm/WebSphere/wlp/usr,member2 --host=bldbt168211.bld.dst.ibm.com --port=9448 --user=admin --password=adminpwd --autoAcceptCertificates</p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">5.Deploying a web application to Liberty</strong></span></p>
+
+<p dir="ltr">Refer to <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_dep_war.html">https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_dep_war.html</a></p>
+
+<p dir="ltr">Configure the application by updating the server.xml in either of the following ways:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; Define the application by using a webApplication element:<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;webApplication contextRoot="helloworld" location="helloworld.war" /&gt;</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; Define the application by using an application element:<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;application context-root="helloworld" type="war" id="helloworld"&nbsp; location="helloworld.war" name="helloworld"/&gt;</p>
+
+<p dir="ltr">copy war file to<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/usr/servers/member1/apps<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/usr/servers/member2/apps</p>
+
+<p dir="ltr">try following URL :</p>
+
+<p dir="ltr"><a href="https://bldbt168211.bld.dst.ibm.com:9446/helloworld/">&nbsp;&nbsp;&nbsp; </a><a href="https://bldbt168211.bld.dst.ibm.com:9446/helloworld/">https://bldbt168211.bld.dst.ibm.com:9446/helloworld/</a><br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+<a href="https://bldbt168212.bld.dst.ibm.com:9447/helloworld/">&nbsp;&nbsp;&nbsp; </a><a href="https://bldbt168212.bld.dst.ibm.com:9447/helloworld/">https://bldbt168212.bld.dst.ibm.com:9447/helloworld/</a></p>
+
+<p dir="ltr"><span style="font-size:14px;"><strong sandbox="allow-forms allow-same-origin allow-scripts allow-popups">6.Setting up dynamic routing for Liberty</strong></span></p>
+
+<p dir="ltr">Refer to : <a href="https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_wve_enabledynrout.html">https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_wve_enabledynrout.html</a></p>
+
+<p dir="ltr">You must install a web server that is supported by the web server plug-in for WebSphere Application Server, such as the IBM HTTP Server, then install Web Server Plug-ins for IBM WebSphere Application Server 9.0.0.3 and later, or 9.0.0.2 with interim fix PI27023, to enable the Dynamic Routing feature.</p>
+
+<p dir="ltr">Enable Dynamic Routing in a controller by adding the following code to the featureManager tag in the server.xml of the controllers. add for all controller1/2/3</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;feature&gt;dynamicRouting-1.0&lt;/feature&gt;</p>
+
+<p dir="ltr">Start all controllers that are enabled by the Dynamic Routing feature.</p>
+
+<p dir="ltr">Run the dynamicRouting setup command on one of the controllers to generate the keystore and plug-in configuration files.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp; /opt/ibm/WebSphere/wlp/bin/dynamicRouting setup --port=9448 --host=bldbt168211.bld.dst.ibm.com --user=admin --password=adminpwd --keystorePassword=controller1 --pluginInstallRoot=/opt/ibm/IHS/plugin/ --webServerNames=webserver1</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do you want to accept the above certificate chain? (y/n) y<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Successfully completed MBean request to the controller.<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The merged plugin configuration document is created successfully = /opt/ibm/WebSphere/wlp/usr/servers/controller1/plugin-cfg.xml<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Generating keystore...<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Successfully completed MBean request to the controller.<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Successfully generated keystore plugin-key-collective1.jks.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..............................</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copy resulting /tmp/plugin-key-collective1.kdb, .sth, .rdb files to the directory /opt/ibm/IHS/plugin/config/webserver1/</p>
+
+<p dir="ltr">Copy the generated plugin-cfg.xml and plugin-key-collective1.jks to /tmp dir, and run "gskcmd" to convert the keystore to CMS format and to set personal certificate as the default.</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/IHS/bin/gskcmd -keydb -convert -pw controller1 -db /tmp/plugin-key-collective1.jks -old_format jks -target /tmp/plugin-key-collective1.kdb -new_format cms -stash<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/IHS/bin/gskcmd -cert -setdefault -pw controller1 -db /tmp/plugin-key-collective1.kdb -label default</p>
+
+<p dir="ltr">Copy the plugin-key-collective1.kdb, plugin-key-collective1.rdb, and plugin-key-collective1.sth files that are created by gskcmd from the temporary directory to the directory :</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/IHS/plugin/config/webserver1/</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cp /tmp/plugin* /opt/ibm/IHS/plugin/config/webserver1/</p>
+
+<p dir="ltr">Copy the plugin-cfg.xml to the directory specified in the WebSpherePluginConfig directive in the web server httpd.conf file<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [wassrvr@bldbt168211 conf]$ cat /opt/ibm/IHS/conf/httpd.conf | grep WebSpherePluginConfig<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WebSpherePluginConfig /opt/ibm/IHS/plugin/config/webserver1/plugin-cfg.xml</p>
+
+<p dir="ltr">Start the web server and begin routing to the application installed in the collective.<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /opt/ibm/IHS/bin/apachectl start</p>
+
+<p dir="ltr">Optional: Add the &lt;dynamicRouting&gt; element to the controller server.xml to specify properties for dynamic routing. The connectorClusterName property specifies the name that dynamic routing associates with the collective. If the connectorClusterName property is not specified,the name of the collective is used. The retryInterval property specifies how long to wait before a reconnection to a controller if a connection fails. The maxRetries property specifies the number of times to try to reconnect to a failed collective controller.<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp; For example:</p>
+
+<p dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;dynamicRouting maxRetries="4" retryInterval="20" connectorClusterName="collective1"/&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;TraceSpecification name="default" specification=":DEBUG"/&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/dynamicRouting&gt;</p>
+
+<h1 dir="ltr">Setting up IHS for Liberty</h1>
+
+<p dir="ltr">Edit /opt/ibm/IHS/conf/httpd.conf on&nbsp;bldbt168211 and add following content:</p>
+
+<p dir="ltr">ServerRoot "/opt/ibm/IHS"</p>
+
+<p dir="ltr">Listen 80<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+Listen 443</p>
+
+<p dir="ltr">User wassrvr<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+Group websrvr</p>
+
+<p dir="ltr">ServerName bldbt168211.bld.dst.ibm.com</p>
+
+<p dir="ltr">add for VirtualHost *:443 , this is copied from httpd.conf in dswwasvt009</p>
+
+<p dir="ltr">&lt;VirtualHost *:443&gt;</p>
+
+<p dir="ltr">SSLEnable<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLFIPSEnable<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLProtocolDisable SSLv2 SSLv3<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLProtocolEnable TLSv12 TLSv11 TLSv1<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+#SSLServerCert dsw<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec ALL NONE<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSV12 +TLS_RSA_WITH_AES_256_CBC_SHA256<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec ALL +TLS_RSA_WITH_AES_256_CBC_SHA<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec ALL +TLS_RSA_WITH_AES_128_CBC_SHA<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSV12 +TLS_RSA_WITH_AES_128_GCM_SHA256<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSV12 +TLS_RSA_WITH_AES_256_GCM_SHA384<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSV12 +TLS_RSA_WITH_AES_128_CBC_SHA256<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSV12 +TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSV12 +TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCipherSpec TLSv12 +TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+#SSLCipherSpec SSL_RSA_WITH_3DES_EDE_CBC_SHA<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+#SSLCipherSpec TLS_RSA_WITH_AES_256_CBC_SHA<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+#SSLCipherSpec TLS_RSA_WITH_AES_128_CBC_SHA<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLCLientAuth none<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+SSLProxyEngine on</p>
+
+<p dir="ltr">RewriteEngine on<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+RewriteRule .* - [F]</p>
+
+<p dir="ltr">&lt;/VirtualHost&gt;</p>
+
+<p dir="ltr">SSLDisable<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+Keyfile /opt/ibm/IHS/plugin/config/webserver1/plugin-key-collective1.kdb<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+..........<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&lt;IfFile plugin/config/webserver1/plugin-cfg.xml&gt;<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp; LoadModule was_ap24_module plugin/bin/mod_was_ap24_http.so<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&nbsp; WebSpherePluginConfig /opt/ibm/IHS/plugin/config/webserver1/plugin-cfg.xml<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+&lt;/IfFile&gt;</p>
+
+<p dir="ltr">Save the httpd.conf</p>
+
+<p dir="ltr">tar -cvf - /opt/ibm/IHS/* | gzip -&gt; libertyIHS.tar.gz&nbsp;&nbsp; copy to bldbt168212.bld.dst.ibm.com and gunzip<br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+gunzip -c libertyIHS.tar.gz | tar -xvf -</p>
+
+<p dir="ltr">vi /opt/ibm/IHS/conf/httpd.conf on bldbt168212&nbsp; and change ServerName</p>
+
+<p dir="ltr">ServerName bldbt168212.bld.dst.ibm.com</p>
+
+<p dir="ltr">Save the httpd.conf and run '/opt/ibm/IHS/bin/apachectl start' to start IHS server</p>
+
+<p dir="ltr">After both IHS servers started, we can do the testing by following URL:</p>
+
+<p dir="ltr"><a href="https://bldbt168211.bld.dst.ibm.com:9446/helloworld/">&nbsp;&nbsp;&nbsp; </a><a href="https://bldbt168211.bld.dst.ibm.com:9446/helloworld/">https://bldbt168211.bld.dst.ibm.com/helloworld/</a><br sandbox="allow-forms allow-same-origin allow-scripts allow-popups" />
+<a href="https://bldbt168212.bld.dst.ibm.com:9447/helloworld/">&nbsp;&nbsp;&nbsp; </a><a href="https://bldbt168212.bld.dst.ibm.com:9447/helloworld/">https://bldbt168212.bld.dst.ibm.com/helloworld/</a></p></div></body></html>

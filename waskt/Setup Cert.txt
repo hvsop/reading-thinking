@@ -1,0 +1,12 @@
+Importing client certificates through WebSphere Application Server
+https://www.ibm.com/support/knowledgecenter/en/SSEKCU_1.1.2.1/com.ibm.psc.doc/rs_original/installer/rs_t_import_client_cert_was.html
+
+
+Importing the WebSphere Application Server certificate into the HTTP Server plug-in
+https://jazz.net/help-dev/clm/index.jsp?topic=%2Fcom.ibm.jazz.install.doc%2Ftopics%2Ft_import_was_cert_to_http_server.html
+
+
+
+
+Creating a Secure Sockets Layer configuration
+https://www.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tsec_sslconfiguration.html

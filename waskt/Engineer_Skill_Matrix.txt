@@ -1,0 +1,36 @@
+WebSphere Application Server:
+-Designing topologies and recommending architecture choices.
+-WAS/IHS installation and maintenance. (install/uninstall/upgrade/patch)
+-Application deployment/upgrade/debugging.
+-Administering WAS/IHS (maintaining resources/security etc.)
+-WebSphere Tuning.
+-Infrastructure monitoring.
+-Understand Network,Databases,File systems,Protocols such as HTTP/HTTPS/SOAP etc.
+-Experience with Linux/Unix.
+-At least one programming language such as Shell/Python.
+-Problem solving skills.
+
+
+
+
+WebSphere MQ:
+-Knowledge of JMS and MQ.
+-Install, configure, troubleshoot, and deploy IBM MQ.
+-Setup MQ objects(Qmgr, queue, channel etc.)
+-Maintain and adapt according to business growth.
+-Monitoring MQ status and investigate MQ issues.
+-Problem solving skills.
+
+
+
+
+DevOps engineer:
+-Written skills for developing and maintaining system documentation.
+-Designing branching model and release/build/deploy process etc.
+-Experience with build and version tools, and version control tools.
+-Experience with CI/CD tools such as Jenkins and UCD.
+-Experience with SSL, HTTPS, and digital certificates.
+-Experience with Scripting (Shell/Python).
+-Development experience with unit test framework.
+-Knowledge of cloud and containers.
+-Problem solving skills.

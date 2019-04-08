@@ -1,0 +1,18 @@
+1. Download MQ - CNS91ML
+
+
+2. Setup MQ.
+
+
+2.1 accept the license : 
+./mqlicense.sh -text_only
+
+
+2.2 Install all components:
+rpm -ivh MQSeries*.rpm
+
+
+2.3 set it as the primary installation:
+[root@david-centos7 bin]# /opt/mqm/bin/setmqinst -i -p /opt/mqm
+133 of 133 tasks have been completed successfully.
+'Installation1' (/opt/mqm) set as the primary installation.

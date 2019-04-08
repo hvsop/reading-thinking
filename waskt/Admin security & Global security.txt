@@ -1,0 +1,6 @@
+Administrative security
+https://www.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.iseries.doc/ae/csec_global.html
+
+
+Global security settings
+https://www.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.iseries.doc/ae/usec_secureadminappinfra.html

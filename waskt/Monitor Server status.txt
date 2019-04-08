@@ -1,0 +1,72 @@
+
+
+getwcserverpid=ps -ef|grep server1|grep -v grep|awk '{print $2}'
+
+
+
+
+Scripts:
+
+
+
+
+#!/bin/bash
+
+
+exit_code=0
+
+
+startServer()
+{
+  ssh wasuser@$1 "cd $2 && ./startServer.sh $3"
+  exit_code=$?
+  echo "StartServer exit code = $exit_code"
+}
+
+
+getPID()
+{
+pid=`ssh wasuser@$1 "$2"`
+
+
+echo "**************************************************"
+echo "Check $4 on $1 , PID = $pid"
+echo "**************************************************"
+
+
+if [ -z "${pid}" ]; then
+ startServer $1 $3 $4
+fi
+}
+
+
+CheckToRestart()
+{
+
+
+  if [ "${isAuthENV}" == "0" ]; then
+    getPID "${node}" "${getrepeaterpid}" "${repeaterServerPath}" "${repeaterServerName}"
+  fi
+  
+  getPID "${node}" "${getwcserverpid}" "${wcServerPath}" "${wcServerName}"
+  getPID "${node}" "${getsearchserverpid}" "${solrServerPath}" "${solrServerName}" 
+  
+  
+}
+
+
+
+
+# MAIN BODY
+
+
+. ${targetenv}.properties
+
+
+for node in ${nodes}
+do
+  CheckToRestart ${node}
+done
+
+
+exit $exit_code

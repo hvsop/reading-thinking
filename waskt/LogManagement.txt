@@ -1,0 +1,40 @@
+1.Add alias to web server httpd.conf as below:
+
+
+Alias /waslogs/ "/usr/WebSphere/AppServer/profiles/DSWNode/logs/"
+
+
+2.Configure security in httpd.conf:
+<Directory "/usr/WebSphere/AppServer/profiles/DSWNode/logs/">
+Options Indexes FollowSymLinks MultiViews IncludesNoExec
+AddOutputFilter Includes html
+LDAPConfigFile /usr/IBMIHS/conf/ldap.prop
+AuthName w3
+AuthType basic
+Require valid-user
+AllowOverride None
+Order allow,deny
+Allow from all
+</Directory>
+
+
+
+
+dswwasps01:/usr/IBMIHS/conf$ grep -v '#'  /usr/IBMIHS/conf/ldap.prop|grep -v '^$'
+ldap.realm=w3
+ldap.URL=ldap://bluepages.ibm.com:636/ou=bluepages,o=ibm.com
+ldap.group.URL=ldap://bluegroups.ibm.com:636/ou=ibmgroups,o=ibm.com
+ldap.transport=SSL
+ldap.application.authType=none
+ldap.user.authType=BasicIfNoCert
+ldap.user.name.filter=(&(objectclass=person)(mail=%v1))
+ldap.user.cert.filter=(&(objectclass=person)(cn=%v1))
+ldap.group.name.filter=(&(cn=%v1)(|(objectclass=groupofnames)(objectclass=groupofuniquenames)))
+ldap.group.memberAttributes=member uniquemember
+ldap.idleConnection.timeout=600
+ldap.waitToRetryConnection.interval=300
+ldap.search.timeout=60
+ldap.cache.timeout=0
+ldap.key.fileName=/usr/IBMIHS/ssl/dswkey.kdb
+ldap.key.file.password.stashFile=/usr/IBMIHS/conf/ldapstash.sth
+ldap.group.search.depth=3

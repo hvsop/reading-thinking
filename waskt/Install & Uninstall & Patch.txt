@@ -1,0 +1,79 @@
+InPartNumbers:
+CIK2HML CIK2IML CIK2JML  WAS 855
+CIK1VML CIK1WML CIK1XML  WAS SUPP 
+CIK2GML   IM 1.6.2
+
+
+1.Install OS prerequisite.
+yum install gtk2 libXtst xorg-x11-fonts-Type1 psmisc
+
+
+2.Install IM
+https://www.ibm.com/support/knowledgecenter/en/SSDV2W_1.3.0/com.ibm.silentinstall12.doc/topics/t_silent_installIM_IMinst.html
+
+
+./installc -installationDirectory /opt/IBM/InstallationManager -acceptLicense
+
+
+3.Install WAS 8.5.5 using the Installation Manager command line.
+https://www.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.installation.base.doc/ae/tins_installation_dist_cl.html
+
+
+3.1 Verify that the product repository is available.
+[root@david-centos7 IM]# /opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /data/images/WAS/WAS_ND/tmp/
+com.ibm.websphere.ND.v85_8.5.5000.20130514_1044
+
+
+3.2 Use the imcl command to install the product.
+[root@david-centos7 tools]# /opt/IBM/InstallationManager/eclipse/tools/imcl install com.ibm.websphere.ND.v85_8.5.5000.20130514_1044 -repositories /data/images/WAS/WAS_ND/tmp/ -installationDirectory /opt/IBM/WebSphere/AppServer -sharedResourcesDirectory /opt/IBM/IMShared -acceptLicense
+Installed com.ibm.websphere.ND.v85_8.5.5000.20130514_1044 to the /opt/IBM/WebSphere/AppServer directory.
+
+
+3.3 Apply fix pack:
+[root@david-centos7 tmp]# /opt/IBM/InstallationManager/eclipse/tools/imcl listAvailablePackages -repositories /data/images/WAS/WAS_FP/tmp/
+com.ibm.websphere.BASE.v85_8.5.5009.20160225_0435
+com.ibm.websphere.BASETRIAL.v85_8.5.5009.20160225_0435
+com.ibm.websphere.DEVELOPERS.v85_8.5.5009.20160225_0435
+com.ibm.websphere.DEVELOPERSILAN.v85_8.5.5009.20160225_0435
+com.ibm.websphere.EXPRESS.v85_8.5.5009.20160225_0435
+com.ibm.websphere.EXPRESSTRIAL.v85_8.5.5009.20160225_0435
+com.ibm.websphere.ND.v85_8.5.5009.20160225_0435
+com.ibm.websphere.NDDMZ.v85_8.5.5009.20160225_0435
+com.ibm.websphere.NDDMZTRIAL.v85_8.5.5009.20160225_0435
+com.ibm.websphere.NDTRIAL.v85_8.5.5009.20160225_0435
+
+
+[root@david-centos7 tmp]# /opt/IBM/InstallationManager/eclipse/tools/imcl install com.ibm.websphere.ND.v85_8.5.5009.20160225_0435 -installationDirectory /opt/IBM/WebSphere/AppServer -repositories /data/images/WAxS/WAS_FP/tmp/ -acceptLicense
+Updated to com.ibm.websphere.ND.v85_8.5.5009.20160225_0435 in the /opt/IBM/WebSphere/AppServer directory.
+
+
+
+
+4. Uninstall:
+./imcl uninstall <package> -installationDirectory installation_directory
+
+
+
+
+5. Install Edge:
+[root@david-centos7 tools]# ./imcl listInstalledPackages
+com.ibm.cic.agent_1.6.2000.20130301_2248
+com.ibm.websphere.ND.v85_8.5.5009.20160225_0435
+com.ibm.websphere.IHS.v85_8.5.5000.20130514_1044
+com.ibm.websphere.PLG.v85_8.5.5000.20130514_1044
+com.ibm.websphere.EDGECP.v85_8.5.5000.20130514_1019
+[root@david-centos7 tools]# ./imcl install com.ibm.websphere.EDGECP.v85_8.5.50014.20180726_1209 -installationDirectory /opt/ibm/edge/cp -repositories /data/images/EDGECP/FP/tmp/
+atoc/                                                                                     repository.config
+native/                                                                                   repository.xml
+Offerings/                                                                                update_com.ibm.websphere.EDGECP.v85_8.5.50014.20180726_1209_from_8.5.0.20120428_1433.xml
+plugins/                                                                                  
+[root@david-centos7 tools]# ./imcl install com.ibm.websphere.EDGECP.v85_8.5.50014.20180726_1209 -installationDirectory /opt/ibm/edge/cp -repositories /data/images/EDGECP/FP/tmp/ -acceptLicense
+Updated to com.ibm.websphere.EDGECP.v85_8.5.50014.20180726_1209 in the /opt/ibm/edge/cp directory.
+[root@david-centos7 tools]# ./imcl install com.ibm.websphere.EDGECP.v85_8.5.50014.20180911_1822 -installationDirectory /opt/ibm/edge/cp -repositories /data/images/EDGECP/iFix/tmp/ -acceptLicense
+Updated to com.ibm.websphere.EDGECP.v85_8.5.50014.20180911_1822 in the /opt/ibm/edge/cp directory.
+[root@david-centos7 tools]# ./imcl listInstalledPackages
+com.ibm.cic.agent_1.6.2000.20130301_2248
+com.ibm.websphere.ND.v85_8.5.5009.20160225_0435
+com.ibm.websphere.IHS.v85_8.5.5000.20130514_1044
+com.ibm.websphere.PLG.v85_8.5.5000.20130514_1044
+com.ibm.websphere.EDGECP.v85_8.5.50014.20180911_1822

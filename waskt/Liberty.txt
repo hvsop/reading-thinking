@@ -1,0 +1,55 @@
+1.Download WAS Liberty V18.0.0.4 with Java EE 8
+https://developer.ibm.com/wasdev/downloads/#asset/runtimes-wlp-javaee8
+
+
+2. Install
+a.  unzip the wlp-javaee8-18.0.0.4.zip
+b.  Install additional feature
+bin/installUtility install adminCenter-1.0
+bin/installUtility install javaee-8.0
+bin/installUtility install serverName
+
+
+
+
+3.administering  Liberty using Admin Center
+
+
+<server description="new server">
+
+
+   <!-- Enable features -->
+   <featureManager>
+      <feature>adminCenter-1.0</feature>
+   </featureManager>
+
+
+   <!-- Define the host name for use by the collective.
+        If the host name needs to be changed, the server should be
+        removed from the collective and re-joined. -->
+   <variable name="defaultHostName" value="localhost" />
+
+
+    <!-- Define an Administrator and non-Administrator -->
+   <basicRegistry id="basic">
+      <user name="admin" password="adminpwd" />
+      <user name="nonadmin" password="nonadminpwd" />
+   </basicRegistry>
+
+
+   <!-- Assign 'admin' to Administrator -->
+   <administrator-role>
+      <user>admin</user>
+   </administrator-role>
+
+
+   <keyStore id="defaultKeyStore" password="Liberty" />
+
+
+   <httpEndpoint id="defaultHttpEndpoint"
+                 host="*"
+                 httpPort="9080"
+                 httpsPort="9443" />
+  
+ <webApplication contextRoot="helloworld" location="helloworld.war" />
+</server>
